@@ -3,11 +3,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.BubbleViewFragment"
-    android:background="#ffffff">
+    android:background="#ffffff"
+    tools:context=".fragments.BubbleViewFragment">
 
-<!--    <com.jialindev.customview.custom.BubbleView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent" />-->
+    <com.jialindev.customview.custom.BubbleView
+        android:id="@+id/bubble_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Segment: "
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <SeekBar
+            android:id="@+id/seekBar_seg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:max="100"
+            android:progress="30" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deviation: "
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <SeekBar
+            android:id="@+id/seekBar_dev"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:max="100"
+            android:progress="20" />
+    </LinearLayout>
 
 </FrameLayout>

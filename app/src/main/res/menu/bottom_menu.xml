@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/findMeViewFragment"
+        android:icon="@drawable/ic_baseline_done_24"
+        android:title="寻找" />
+    <item
+        android:id="@+id/bubbleViewFragment"
+        android:icon="@drawable/ic_baseline_done_24"
+        android:title="气泡" />
+    <item
+        android:id="@+id/eulerViewFragment"
+        android:icon="@drawable/ic_baseline_done_24"
+        android:title="欧拉" />
+</menu>

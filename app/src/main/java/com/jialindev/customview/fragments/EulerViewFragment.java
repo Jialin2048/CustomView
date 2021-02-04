@@ -12,11 +12,7 @@ import com.jialindev.customview.R;
 
 public class EulerViewFragment extends Fragment {
     public EulerViewFragment() {
-        // Required empty public constructor
-    }
-    public static EulerViewFragment newInstance(String param1, String param2) {
-        EulerViewFragment fragment = new EulerViewFragment();
-        return fragment;
+
     }
 
     @Override
@@ -28,7 +24,6 @@ public class EulerViewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        System.out.println("hello euler");
         return inflater.inflate(R.layout.fragment_euler_view, container, false);
     }
 }

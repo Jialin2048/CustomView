@@ -26,13 +26,7 @@ public class FindMeViewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        System.out.println("hello findme");
         binding = FragmentFindMeViewBinding.inflate(inflater, container, false);
         return binding.getRoot();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
     }
 }

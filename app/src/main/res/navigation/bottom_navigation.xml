@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/butttom_navigation"
+    app:startDestination="@id/findMeViewFragment">
+
+    <fragment
+        android:id="@+id/findMeViewFragment"
+        android:name="com.jialindev.customview.fragments.FindMeViewFragment"
+        android:label="fragment_find_me_view"
+        tools:layout="@layout/fragment_find_me_view" />
+    <fragment
+        android:id="@+id/bubbleViewFragment"
+        android:name="com.jialindev.customview.fragments.BubbleViewFragment"
+        android:label="fragment_bubble_view"
+        tools:layout="@layout/fragment_bubble_view" />
+    <fragment
+        android:id="@+id/eulerViewFragment"
+        android:name="com.jialindev.customview.fragments.EulerViewFragment"
+        android:label="fragment_euler_view"
+        tools:layout="@layout/fragment_euler_view" />
+</navigation>

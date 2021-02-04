@@ -11,13 +11,17 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.Toast;
 
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.OnLifecycleEvent;
+
 import com.jialindev.customview.bean.Bubble;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class BubbleView extends SurfaceView implements SurfaceHolder.Callback{
+public class BubbleView extends SurfaceView implements LifecycleObserver {
     private Canvas canvas = null;
     private List<Integer> colors ;
     private Paint paint ;
@@ -47,7 +51,6 @@ public class BubbleView extends SurfaceView implements SurfaceHolder.Callback{
     }
 
     private void initView() {
-        getHolder().addCallback(this);
         colors = new ArrayList<>();
         colors.add(Color.BLUE);
         colors.add(Color.GRAY);
@@ -118,23 +121,14 @@ public class BubbleView extends SurfaceView implements SurfaceHolder.Callback{
         }).start();
     }
 
-    @Override
-    public void surfaceCreated(SurfaceHolder holder) {
+    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
+    public void onResume() {
         aLive = true;
-        if (holder != null) {
-            if (holder.getSurface().isValid()) {
-                init();
-            }
-        }
+        init();
     }
 
-    @Override
-    public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-
-    }
-
-    @Override
-    public void surfaceDestroyed(SurfaceHolder holder) {
+    @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
+    public void onPause() {
         aLive = false;
     }
 }
